@@ -4,7 +4,7 @@ Release:             1
 Summary:             Apache Release Audit Tool (RAT)
 License:             ASL 2.0
 URL:                 http://creadur.apache.org/rat/
-Source0:             http://www.apache.org/dist/creadur/apache-rat-0.12/apache-rat-0.12-src.tar.bz2
+Source0:             https://archive.apache.org/dist/creadur/apache-rat-0.12/apache-rat-0.12-src.tar.bz2
 BuildArch:           noarch
 Patch1:              0001-Port-to-current-doxia-sitetools.patch
 BuildRequires:       maven-local mvn(commons-cli:commons-cli)
