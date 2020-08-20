@@ -1,0 +1,4 @@
+version_control: github
+src_repo: apache/creadur-rat
+tag_prefix: "apache-rat-project-"
+seperator: "."
