@@ -1,12 +1,13 @@
 Name:                apache-rat
 Version:             0.12
-Release:             1
+Release:             2
 Summary:             Apache Release Audit Tool (RAT)
 License:             ASL 2.0
 URL:                 http://creadur.apache.org/rat/
 Source0:             https://archive.apache.org/dist/creadur/apache-rat-0.12/apache-rat-0.12-src.tar.bz2
 BuildArch:           noarch
 Patch1:              0001-Port-to-current-doxia-sitetools.patch
+Patch2:              increase_test_timeout.patch
 BuildRequires:       maven-local mvn(commons-cli:commons-cli)
 BuildRequires:       mvn(commons-collections:commons-collections) mvn(commons-io:commons-io)
 BuildRequires:       mvn(commons-lang:commons-lang) mvn(junit:junit) mvn(org.apache.ant:ant)
@@ -69,6 +70,7 @@ This package contains the API documentation for %{name}.
 %prep
 %setup -q -n %{name}-%{version}
 %patch1 -p1
+%patch2 -p1
 %pom_disable_module apache-rat
 %pom_remove_plugin -r :maven-antrun-plugin
 %pom_remove_plugin :animal-sniffer-maven-plugin
@@ -106,5 +108,8 @@ echo "apache-rat/rat-core apache-rat/rat-tasks" > $RPM_BUILD_ROOT%{_sysconfdir}/
 %doc LICENSE NOTICE
 
 %changelog
+* Thu Mar 11 2022 lvxiaoqian <xiaoqian@nj.iscas.ac.cn> - 0.12-2
+- increase test timeout
+
 * Thu Aug 13 2020 chengzihan <chengzihan2@huawei.com> - 0.12-1
 - Package init

@@ -1,0 +1,22 @@
+--- a/apache-rat-core/src/test/java/org/apache/rat/analysis/license/AppliedApacheSoftwareLicense20Test.java	2016-06-07 14:47:22.000000000 +0800
++++ b/apache-rat-core/src/test/java/org/apache/rat/analysis/license/AppliedApacheSoftwareLicense20Test.java	2022-03-10 10:36:59.098880700 +0800
+@@ -101,7 +101,7 @@
+         DirectoryScanner.testFilesInDir("appliedAL20/good", license, true);
+     }
+ 
+-    @Test(timeout = 2000) // may need to be adjusted if many more files are added
++    @Test(timeout = 40000) // may need to be adjusted if many more files are added
+     public void baddFiles() throws Exception {
+         DirectoryScanner.testFilesInDir("appliedAL20/bad", license, false);
+     }
+--- a/apache-rat-core/src/test/java/org/apache/rat/analysis/license/OASISLicenseTest.java	2016-06-07 14:47:22.000000000 +0800
++++ b/apache-rat-core/src/test/java/org/apache/rat/analysis/license/OASISLicenseTest.java	2022-03-10 10:46:54.927520300 +0800
+@@ -109,7 +109,7 @@
+         DirectoryScanner.testFilesInDir("oasis/good", license, true);
+     }
+ 
+-    @Test(timeout = 2000) // may need to be adjusted if many more files are added
++    @Test(timeout = 40000) // may need to be adjusted if many more files are added
+     public void baddFiles() throws Exception {
+         DirectoryScanner.testFilesInDir("oasis/bad", license, false);
+     }
